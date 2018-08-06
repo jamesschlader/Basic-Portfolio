@@ -59,18 +59,18 @@
         padding: 0;
         margin: 0 auto;
         position: absolute;
-        right: 0;
-        top: 17px;
+        right: 10%;
+        top: 40%;
     
     }
 
     .top ul li {
         text-decoration-style: none; 
         display: inline-block;
-        font-size: 1.4rem;
-        padding: 0 20px;
+        font-size: 1.2rem;
+        padding: 10px 20px;
         transition: transform 2s;
-        border-left: 2px solid var(--primary);
+        
         }
 
     .top ul li a {
@@ -105,10 +105,12 @@
     }
 
     .container header {
+        width: 100%;
         border-bottom: 3px solid var(--primary);
     }
 
     .container img {
+        
         position: relative;
         left: 0;
         top: 10px;
@@ -124,17 +126,24 @@
     }
 
     .deck {
-        display: inline-block;
-       
+        display: block;       
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-evenly;
     }
 
     .card {
+        
+        width: 200px;
         box-sizing: border-box;
-        display: inline-block;
-        margin: 10px;
+        display: block;
+        margin: 20px;
     }
 
     .card img {
+        width: 100%;
         transition: width 2s;
     }
 
@@ -157,7 +166,7 @@
         font-size: 1.4rem;
         z-index: 2;
         padding: 20px 0px;
-        margin: 0;
+        margin: 0 auto;
     }
 
     .card a img:hover {
@@ -200,7 +209,12 @@
     }
 
     @media screen and (max-width: 980px) {
+        body {
+            width: 100%;
+        }   
+
         .top {
+            width: 100%;
             background-color: var(--ground1);
         }
         .container {
@@ -209,24 +223,34 @@
     }
 
     @media screen and (max-width: 768px) {
+
+        body {
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;
+        }
         .container {
             width: 100%;
         }
 
-        .deck {
-            display: block;
-            padding: 0 auto;
+        .top {
+            width:100%;
         }
 
-        .card {
-            display: block;
-            padding: 0 auto;
+        .row {
+            flex-wrap: wrap;
         }
-    }
 
     @media screen and (max-width: 640px) {
         .top {
+            width: 100%;
             background-color: var(--ground1);
+        }
+
+        body {
+            width: 100%;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .container {
@@ -239,9 +263,13 @@
             padding: 0 auto;
         }
 
+        .row {
+            flex-direction: column;
+        }
+
         .card {
             display: block;
-            padding: 0 auto;
+            margin: 0 auto;
         }
 
         .top h1 {
@@ -266,8 +294,4 @@
         }
     }
 
-
-    
-
-
-   
+    }
